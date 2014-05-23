@@ -4,10 +4,11 @@
 	<title>AngularJS project 2</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/underscore.min.js"></script>
 	<script type="text/javascript" src="js/angAPP.js"></script>
 </head>
 <body ng-controller="todoCtrl">
-
+<h2>Total todo: {{getTotalTodos()}}</h2>
 <ul>
 	<li ng-repeat="todo in todos">
 		<input type="checkbox" ng-model="todo.done">
@@ -20,6 +21,7 @@
 	<br>
 	{{formTodoText}}
 </form>
+<button ng-click="clearFin()">Clear completed tasks</button>
 
 </body>
 </html>
